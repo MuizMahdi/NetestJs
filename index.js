@@ -36,8 +36,7 @@ function netest(opts) {
          let tDuration = tEnd - tStart;
          loadTimes.push(tDuration);
       })
-      .catch((err) => new Promise((resolve, reject) => reject({ hasFailed: true })))
-      .finally(() => clearInterval(loadingInterval));
+      .catch((err) => new Promise((resolve, reject) => reject({ hasFailed: true })));
 
    }
 
