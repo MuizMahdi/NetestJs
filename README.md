@@ -1,7 +1,8 @@
 # Netest
 
 Netest is a Javascript library for testing internet speed in the browser.
-
+A speed check is conducted by downloading image(s), and using download time in order to get the average download speed,
+multiple checks could be made with different parameters.
 
 ## Installation
 
@@ -22,7 +23,7 @@ const netestOptions = {
    slowSpeedThreshold: 100,
    numOfChecks: 3,
    failIfTooLong: true,
-   timeUntilLoadFailure: speedCheckInterval/3,
+   timeUntilLoadFailure: 60000,
    loadFailureCheckInterval: 2000,
    imageSource: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Pizigani_1367_Chart_1MB.jpg",
    imageSize: 1040
