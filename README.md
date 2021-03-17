@@ -5,7 +5,7 @@ Netest is a Javascript library for testing internet speed in the browser.
 
 ## Installation
 
-Use [npm](https://pip.pypa.io/en/stable/) to install Netest.
+Use [npm](https://www.npmjs.com/package/netest) to install Netest.
 
 ```bash
 npm install netest
@@ -19,11 +19,11 @@ npm install netest
 const netest = require("netest")
 
 const netestOptions = {
-   slowSpeedThreshold: 100, // Slow connection speed thresold in kb/s, any lower and user's connection is considered slow
-   numOfChecks: 3, // Number of checks conducted and averaged
-   failIfTooLong: true, // Fails the tests if a check takes too long 
-   timeUntilLoadFailure: speedCheckInterval/3, // Default: speedCheckInterval/numOfChecks
-   loadFailureCheckInterval: 2000, // Default: 2secs
+   slowSpeedThreshold: 100,
+   numOfChecks: 3,
+   failIfTooLong: true,
+   timeUntilLoadFailure: speedCheckInterval/3,
+   loadFailureCheckInterval: 2000,
    imageSource: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Pizigani_1367_Chart_1MB.jpg",
    imageSize: 1040
 };
