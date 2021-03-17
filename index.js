@@ -1,4 +1,4 @@
-function netest(opts) {
+async function netest(opts) {
 
    let loadTimes = [];
 
