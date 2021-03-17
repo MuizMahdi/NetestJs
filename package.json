@@ -1,0 +1,26 @@
+{
+   "name": "netest",
+   "version": "1.0.0",
+   "description": "A small library for testing internet speed in the browser",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MuizMahdi/NetestJs.git"
+   },
+   "keywords": [
+      "connection",
+      "internet",
+      "speed",
+      "bandwidth",
+      "test"
+   ],
+   "author": "Muizz Mahdy <moezmahdy@gmail.com> (https://muizzmahdy.com)",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/MuizMahdi/NetestJs/issues"
+   },
+   "homepage": "https://github.com/MuizMahdi/NetestJs#readme"
+}
