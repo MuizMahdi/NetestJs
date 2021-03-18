@@ -15,6 +15,8 @@ npm install netest
 
 ## Usage
 
+Conduct a single check
+
 ```javascript
 
 const netest = require("netest")
@@ -36,6 +38,26 @@ netest(netestOptions)
 .catch((error) => {
    if (error.hasFailed) console.log("Too bad, your internet sucks...")
 });
+
+```
+
+
+You can also use it to run regular speed checks
+
+```javascript
+
+let speedCheckInterval = 3*60*1000; // 1 check per 3 minutes
+
+let checkInterval = new BehaviorSubject(speedCheckInterval);
+let speedChecks = checkInterval.pipe(
+   switchMap(i => interval(i)),
+   tap(() => {
+      netest(netestOptions)
+      .then((result) => { if (!result.isSlow) console.log("Your internet is great!") })
+      .catch((error) => { if (error.hasFailed) console.log("Too bad, your internet sucks...") })
+      .finally(() => checkInterval.next(speedCheckInterval)); // Reset the timer at end
+   })
+).subscribe();
 
 ```
 
