@@ -77,7 +77,7 @@ let speedChecks = checkInterval.pipe(
 ## Check Completion Outputs
 | Field                    | Description                                                                                 | Type       |
 |--------------------------|---------------------------------------------------------------------------------------------|------------|
-| isSlow                   | Indicates that the internet speed is slow, when the speed preceeds slowSpeedThreshold       | Numeric    |
+| isSlow                   | Indicates that the internet speed is slow, when the speed precedes slowSpeedThreshold       | Numeric    |
 | kbPerSec                 | Average internet speed                                                                      | Numeric    |
 | averageLoadTime          | Average completion time of all checks                                                       | Boolean    |
 | totalLoadTime            | Total completion time of all checks                                                         | Numeric    |
