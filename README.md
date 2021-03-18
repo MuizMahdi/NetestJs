@@ -1,8 +1,14 @@
 # Netest
 
+[![NPM](https://img.shields.io/npm/v/netest.svg)](https://www.npmjs.com/package/netest)
+![License](https://img.shields.io/npm/l/netest.svg)
+
+[![NPM](https://nodei.co/npm/netest.png)](https://nodei.co/npm/netest/)
+
 Netest is a Javascript library for testing internet speed in the browser.
 A speed check is conducted by downloading image(s), and using download time in order to get the average download speed,
-multiple checks could be made with different parameters.
+multiple checks could be made with different parameters.<br/><br/>
+
 
 ## Installation
 
@@ -12,10 +18,11 @@ Use [npm](https://www.npmjs.com/package/netest) to install Netest.
 npm install netest
 ```
 
+<br/>
 
 ## Usage
 
-Conduct a single check
+### Conduct a single check
 
 ```javascript
 
@@ -42,7 +49,7 @@ netest(netestOptions)
 ```
 
 
-You can also use it to run regular speed checks
+### You can also use it to run regular speed checks on the background
 
 ```javascript
 
@@ -61,6 +68,7 @@ let speedChecks = checkInterval.pipe(
 
 ```
 
+<br/>
 
 ## Options
 | Field                    | Description                                                                                 | Type       | Required   | 
@@ -73,6 +81,7 @@ let speedChecks = checkInterval.pipe(
 | imageSource              | Source of the image to be downloaded for the speed checks                                   | String     | Yes        |
 | imageSize                | Size of the speed checks image in Kb                                                        | Numeric    | Yes        |
 
+<br/>
 
 ## Check Completion Outputs
 | Field                    | Description                                                                                 | Type       |
@@ -82,15 +91,19 @@ let speedChecks = checkInterval.pipe(
 | averageLoadTime          | Average completion time of all checks                                                       | Boolean    |
 | totalLoadTime            | Total completion time of all checks                                                         | Numeric    |
 
+<br/>
+
 ## Check Failure Outputs
 | Field                    | Description                                                                                 | Type       |
 |--------------------------|---------------------------------------------------------------------------------------------|------------|
 | hasFailed                | Indicates that a check has failed, when timeUntilLoadFailure threshold has passed           | Numeric    |
 
+<br/>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+<br/>
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
