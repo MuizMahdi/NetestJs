@@ -63,15 +63,29 @@ let speedChecks = checkInterval.pipe(
 
 
 ## Options
-| Field                    | Description                                                                                 | Required |
-|--------------------------|---------------------------------------------------------------------------------------------|----------|
-| slowSpeedThreshold       | Slow connection speed threshold in kb/s, any lower and user's connection is considered slow | Yes      |
-| numOfChecks              | Number of checks conducted and averaged                                                     | Yes      |
-| failIfTooLong            | Fails the tests if a check takes too long                                                   | Yes      |
-| timeUntilLoadFailure     | Duration threshold of a single check for test failure in ms                                 | Yes      |
-| loadFailureCheckInterval | How often should the failure threshold check be conducted in ms                             | Yes      |
-| imageSource              | Source of the image to be downloaded for the speed checks                                   | Yes      |
-| imageSize                | Size of the speed checks image in Kb                                                        | Yes      |
+| Field                    | Description                                                                                 | Type       | Required   | 
+|--------------------------|---------------------------------------------------------------------------------------------|------------|------------|
+| slowSpeedThreshold       | Slow connection speed threshold in kb/s, any lower and user's connection is considered slow | Numeric    | Yes        |
+| numOfChecks              | Number of checks conducted and averaged                                                     | Numeric    | Yes        |
+| failIfTooLong            | Fails the tests if a check takes too long                                                   | Boolean    | Yes        |
+| timeUntilLoadFailure     | Duration threshold of a single check for test failure in ms                                 | Numeric    | Yes        |
+| loadFailureCheckInterval | How often should the failure threshold check be conducted in ms                             | Numeric    | Yes        |
+| imageSource              | Source of the image to be downloaded for the speed checks                                   | String     | Yes        |
+| imageSize                | Size of the speed checks image in Kb                                                        | Numeric    | Yes        |
+
+
+## Check Completion Outputs
+| Field                    | Description                                                                                 | Type       |
+|--------------------------|---------------------------------------------------------------------------------------------|------------|
+| isSlow                   | Indicates that the internet speed is slow, when the speed preceeds slowSpeedThreshold       | Numeric    |
+| kbPerSec                 | Average internet speed                                                                      | Numeric    |
+| averageLoadTime          | Average completion time of all checks                                                       | Boolean    |
+| totalLoadTime            | Total completion time of all checks                                                         | Numeric    |
+
+## Check Failure Outputs
+| Field                    | Description                                                                                 | Type       |
+|--------------------------|---------------------------------------------------------------------------------------------|------------|
+| hasFailed                | Indicates that a check has failed, when timeUntilLoadFailure threshold has passed           | Numeric    |
 
 
 ## Contributing
